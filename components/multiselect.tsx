@@ -61,7 +61,7 @@ export const MultiSelect = forwardRef<HTMLDivElement, MultiSelectProps>(
             onChange={(e) => setQuery(e.target.value as string)}
             value={query}
             onFocus={() => setIsSelectionFocused(true)}
-            // onBlur={() => setIsSelectionFocused(false)}
+          // onBlur={() => setIsSelectionFocused(false)}
           />
         </div>
         {isSelectionFocused && (
@@ -83,7 +83,6 @@ export const MultiSelect = forwardRef<HTMLDivElement, MultiSelectProps>(
                         let updatedOptions = [...selected];
                         updatedOptions.push(option);
                         setSelected(updatedOptions);
-                        console.log('here...', updatedOptions);
                       }
                       setQuery('');
                     }}>
